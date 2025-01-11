@@ -1,4 +1,10 @@
-#Insertion Sort Algorithm 
+"""Insertion Sort Algorithm 
+
+1. Useful for small datasets
+2. Works well on nearly sorted data
+3. Stable 
+4. Time: O(n^2) Space: O(1) 
+"""
 
 arr = [3,4,5,1,4]
 
