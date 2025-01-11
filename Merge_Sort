@@ -1,0 +1,41 @@
+"""
+Merge Sort: 
+1. Good for sorting large data sets
+2. Works better with partially stored data sets 
+3. Stable
+4. Time: O(n log n) Space: O(n) 
+
+Part 1: Split array into halves 
+Part 2: Merge sorted halves 
+
+Merge sort will recursively split the input array into halves
+sort each of those halves 
+and then merge them. 
+"""
+
+def merge_sort(arr): 
+  if len(arr) <= 1: 
+    return arr
+
+  mid = len(arr) // 2 
+  left = merge_sort(arr[:mid])
+  right = merge_sort(arr[mid:])
+
+  return merg(left, right) 
+
+def merge(left, right): 
+  result = [] #stored as a list 
+  i = j = 0 #set i and j at zero 
+
+  while i < len(left) and j < len(right): 
+    if left[i] <= right[j]
+      result.append(left[i])
+      i += 1 
+
+    else: 
+      result.append(right[j])
+      j += 1 
+
+  result.extend(left[i:])
+  result.extend[right[j:])
+  return result 
